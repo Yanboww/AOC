@@ -1,10 +1,10 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
-public class Main {
+public class Day8 {
     public static void main(String[] args) {
-        System.out.println(findVisible("input"));
-        System.out.println(findBestScenicScore("input"));
+        System.out.println(findVisible("inputs/input8"));
+        System.out.println(findBestScenicScore("inputs/input8"));
     }
 
     public static int findVisible(String fileName)
