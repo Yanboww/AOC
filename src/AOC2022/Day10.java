@@ -1,3 +1,5 @@
+package AOC2022;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -5,8 +7,8 @@ import java.util.Scanner;
 public class Day10 {
     public static void main(String[] args)
     {
-        System.out.println(findSignalStrength("inputs/input10"));
-        findSignalPrint("inputs/input10");
+        System.out.println(findSignalStrength("inputs/AOC2022Inputs/input10"));
+        findSignalPrint("inputs/AOC2022Inputs/input10");
     }
 
     public static int findSignalStrength(String fileName)

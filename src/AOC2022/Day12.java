@@ -1,3 +1,5 @@
+package AOC2022;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -16,7 +18,7 @@ public class Day12 {
         key.put(".",1000);
         key.put("S",-1);
         key.put("E",1000);
-        System.out.println(findPath("inputs/input12"));
+        System.out.println(findPath("inputs/AOC2022Inputs/input12"));
     }
     public static int findPath(String fileName)
     {

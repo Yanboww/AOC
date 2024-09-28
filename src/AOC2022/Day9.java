@@ -1,11 +1,13 @@
+package AOC2022;
+
 import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 public class Day9 {
     public static void main(String[] args) {
-        System.out.println(tailVisited("inputs/input9"));
-        System.out.println(tailVisitedPart2("inputs/input9"));
+        System.out.println(tailVisited("inputs/AOC2022Inputs/input9"));
+        System.out.println(tailVisitedPart2("inputs/AOC2022Inputs/input9"));
     }
 
     public static int tailVisited(String fileName)

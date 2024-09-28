@@ -1,3 +1,5 @@
+package AOC2022;
+
 import java.util.HashSet;
 import java.util.Scanner;
 import java.io.File;
@@ -8,8 +10,8 @@ public class Day3 {
     public static void main(String[] args)
     {
         setPriority();
-        System.out.println(findPriority("inputs/input3"));
-        System.out.println(findBadgePriority("inputs/input3"));
+        System.out.println(findPriority("inputs/AOC2022Inputs/input3"));
+        System.out.println(findBadgePriority("inputs/AOC2022Inputs/input3"));
     }
 
     public static void setPriority()

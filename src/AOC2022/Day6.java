@@ -1,11 +1,13 @@
+package AOC2022;
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 public class Day6 {
     public static void main(String[] args)
     {
-        System.out.println(findProcessBeforePacket("inputs/input6"));
-        System.out.println(findProcessBeforeMessage("inputs/input6"));
+        System.out.println(findProcessBeforePacket("inputs/AOC2022Inputs/input6"));
+        System.out.println(findProcessBeforeMessage("inputs/AOC2022Inputs/input6"));
     }
 
     public static int findProcessBeforePacket(String fileName)

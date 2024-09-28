@@ -1,8 +1,6 @@
-package Day11;
-import javax.swing.plaf.synth.SynthTextAreaUI;
+package AOC2022.Day11;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.Scanner;
 public class Day11 {
     public static void main(String[] args)

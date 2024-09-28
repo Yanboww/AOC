@@ -1,11 +1,13 @@
+package AOC2022;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 public class Day7 {
     public static void main(String[] args) {
-        System.out.println(findSumSmallestDirectories("inputs/input7"));
-        System.out.println(findSmallestDeleted("inputs/input7"));
+        System.out.println(findSumSmallestDirectories("inputs/AOC2022Inputs/input7"));
+        System.out.println(findSmallestDeleted("inputs/AOC2022Inputs/input7"));
     }
     public static int findSumSmallestDirectories(String fileName)
     {
@@ -181,7 +183,7 @@ public class Day7 {
             }
             else total += Integer.parseInt(line);
         }
-        System.out.println(total);
+        //System.out.println(total);
         return total;
     }
 

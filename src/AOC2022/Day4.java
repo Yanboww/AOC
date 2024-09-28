@@ -1,11 +1,13 @@
+package AOC2022;
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 public class Day4 {
     public static void main(String[] args)
     {
-        System.out.println(findOverlap("inputs/input4"));
-        System.out.println(findOverlapAtAll("inputs/input4"));
+        System.out.println(findOverlap("inputs/AOC2022Inputs/input4"));
+        System.out.println(findOverlapAtAll("inputs/AOC2022Inputs/input4"));
 
     }
 

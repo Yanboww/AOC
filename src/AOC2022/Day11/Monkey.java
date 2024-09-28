@@ -1,6 +1,5 @@
-package Day11;
+package AOC2022.Day11;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Monkey {
     final private ArrayList<Long> items;

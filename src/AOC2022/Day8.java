@@ -1,10 +1,12 @@
+package AOC2022;
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 public class Day8 {
     public static void main(String[] args) {
-        System.out.println(findVisible("inputs/input8"));
-        System.out.println(findBestScenicScore("inputs/input8"));
+        System.out.println(findVisible("inputs/AOC2022Inputs/input8"));
+        System.out.println(findBestScenicScore("inputs/AOC2022Inputs/input8"));
     }
 
     public static int findVisible(String fileName)

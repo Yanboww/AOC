@@ -1,11 +1,13 @@
+package AOC2022;
+
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.util.Arrays;
 public class Day5 {
     public static void main(String[] args) {
-        System.out.println(findTop9000("inputs/input5"));
-        System.out.println(findTop9001("inputs/input5"));
+        System.out.println(findTop9000("inputs/AOC2022Inputs/input5"));
+        System.out.println(findTop9001("inputs/AOC2022Inputs/input5"));
     }
 
     public static String findTop9000(String fileName)

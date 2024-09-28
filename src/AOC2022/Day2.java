@@ -1,3 +1,5 @@
+package AOC2022;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -9,8 +11,8 @@ public class Day2 {
     {
         setMoveValue();
         setWin();
-        System.out.println(calcScore("inputs/input2"));
-        System.out.println(calcScoreRevised("inputs/input2"));
+        System.out.println(calcScore("inputs/AOC2022Inputs/input2"));
+        System.out.println(calcScoreRevised("inputs/AOC2022Inputs/input2"));
     }
 
     public static int calcScore(String fileName)

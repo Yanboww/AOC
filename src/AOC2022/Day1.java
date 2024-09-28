@@ -1,11 +1,13 @@
+package AOC2022;
+
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 public class Day1 {
     public static void main(String[] args)
     {
-        System.out.println(findHighestProtein("inputs/input1"));
-        System.out.println(findTopThree("inputs/input1"));
+        System.out.println(findHighestProtein("inputs/AOC2022Inputs/input1"));
+        System.out.println(findTopThree("inputs/AOC2022Inputs/input1"));
     }
 
     public static int findHighestProtein(String fileName)
