@@ -1,6 +1,4 @@
 package AOC2021;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
