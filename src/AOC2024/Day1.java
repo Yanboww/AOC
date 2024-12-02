@@ -5,7 +5,6 @@ import java.util.*;
 public class Day1 {
     public static void main(String[] args)
     {
-
         System.out.println(findTotalDistance("inputs/AOC2024inputs/day1"));
         System.out.println(findTotalSimilarity("inputs/AOC2024inputs/day1"));
     }
@@ -60,9 +59,8 @@ public class Day1 {
         sortArr(list1);
         sortArr(list2);
         int sum =0;
-        for(int i = 0; i < list1.size(); i++)
+        for(int val : list1)
         {
-            int val = list1.get(i);
             sum+=(val * findSim(val, list2));
         }
         return sum;
