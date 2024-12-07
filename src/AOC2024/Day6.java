@@ -5,8 +5,8 @@ public class Day6 {
     static HashSet <int[]> steps = new HashSet<>();
     public static void main(String[] args)
     {
-        System.out.println(countGuardStep("inputs/AOC2024Inputs/day6", 1));
-        System.out.println(countGuardStep("inputs/AOC2024Inputs/day6", 2));
+        System.out.println(countGuardStep("inputs/input.txt", 1));
+        System.out.println(countGuardStep("inputs/input.txt", 2));
     }
 
     public static int countGuardStep(String fileName, int part)
