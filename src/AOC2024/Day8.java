@@ -6,7 +6,6 @@ public class Day8 {
     {
         System.out.println(findAntiNode("inputs/input.txt",1));
         System.out.println(findAntiNode("inputs/input.txt",2));
-        //System.out.println(findAntiNode("inputs/trial", 2));
     }
 
     public static int findAntiNode  (String fileName, int part)
@@ -119,7 +118,6 @@ public class Day8 {
         int count = 0;
         for(String[] arr : temp )
         {
-            //System.out.println(Arrays.toString(arr));
             for(String val : arr)
             {
                 if(val != null && val.equals("#")) count++;
