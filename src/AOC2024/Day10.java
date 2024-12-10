@@ -6,7 +6,6 @@ public class Day10 {
     {
         System.out.println(findScores("inputs/input.txt",1));
         System.out.println(findScores("inputs/input.txt",2));
-        //System.out.println(findScores("inputs/trial",2));
     }
 
     public static int findScores (String fileName, int part)
