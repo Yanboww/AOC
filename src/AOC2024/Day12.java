@@ -11,7 +11,7 @@ public class Day12 {
     {
         File f = new File(fileName);
         int length = 140;
-        if(fileName.contains("trial")) length = 2;
+        if(fileName.contains("trial")) length = 10;
         String[][] map = new String[length][];
         try{
             Scanner s = new Scanner(f);
