@@ -23,8 +23,8 @@ public class Day14 {
             while(s.hasNextLine()){
                 String line = s.nextLine();
                 int[] temp = parse(line);
-                input.add(temp);
                 if(part == 1)calc100SecMap(map,temp);
+                else input.add(temp);
             }
         }
         catch (FileNotFoundException e) {
