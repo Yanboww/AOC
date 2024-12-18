@@ -4,7 +4,7 @@ import java.util.*;
 public class Day16 {
     public static void main(String[] args)
     {
-        //System.out.println(lowestScore("inputs/input.txt",1));
+        System.out.println(lowestScore("inputs/input.txt",1));
         //System.out.println(lowestScore("inputs/input.txt",1));
         System.out.println(lowestScore("inputs/trial",1));
     }
@@ -66,13 +66,14 @@ public class Day16 {
             if(direction.equals("l") && cord[1]>0)
             {
                 if(!map[cord[0]][cord[1]-1].equals("#")  ){
-                    if(nodes.contains(cord[0]+","+(cord[1]-1))){
-                        queue.add(new int[]{cord[0],cord[1]-1});
-                    }
                     String temp = cord[0]+","+(cord[1]-1);
                     if(!dict.containsKey(temp) || Integer.parseInt(dict.get(temp).substring(0,dict.get(temp).indexOf(" ")) )> score+1) {
                         dict.put(cord[0]+","+(cord[1]-1), score+1 + " " + cord[0]+","+cord[1] + " " + direction);
                         //System.out.println(direction);
+                        queue.add(new int[]{cord[0],cord[1]-1});
+                    }
+                    else if(nodes.contains(cord[0]+","+(cord[1]-1))){
+                        queue.add(new int[]{cord[0],cord[1]-1});
                     }
                 }
             }
@@ -80,13 +81,14 @@ public class Day16 {
             {
                 if(!map[cord[0]][cord[1]+1].equals("#"))
                 {
-                    if(nodes.contains(cord[0]+","+(cord[1]+1))){
-                        queue.add(new int[]{cord[0],cord[1]+1});
-                    }
                     String temp = cord[0]+","+(cord[1]+1);
                     if(!dict.containsKey(temp) || Integer.parseInt(dict.get(temp).substring(0,dict.get(temp).indexOf(" ")) )> score+1){
                         dict.put(cord[0]+","+(cord[1]+1), score+1 + " " + cord[0]+","+cord[1] + " " + direction);
-                       // System.out.println(direction);
+                        // System.out.println(direction);
+                        queue.add(new int[]{cord[0],cord[1]+1});
+                    }
+                    else if(nodes.contains(cord[0]+","+(cord[1]+1))){
+                        queue.add(new int[]{cord[0],cord[1]+1});
                     }
                 }
             }
@@ -94,13 +96,14 @@ public class Day16 {
             {
                 if(!map[cord[0]+1][cord[1]].equals("#"))
                 {
-                    if(nodes.contains(cord[0]+1+","+(cord[1]))){
-                        queue.add(new int[]{cord[0]+1,cord[1]});
-                    }
                     String temp = cord[0]+1+","+(cord[1]);
                     if(!dict.containsKey(temp) || Integer.parseInt(dict.get(temp).substring(0,dict.get(temp).indexOf(" ")) )> score+1) {
                         dict.put(cord[0]+1+","+cord[1], score+1 + " " + cord[0]+","+cord[1] + " " + direction);
+                        queue.add(new int[]{cord[0]+1,cord[1]});
                         //System.out.println(direction);
+                    }
+                    else if(nodes.contains(cord[0]+1+","+(cord[1]))){
+                        queue.add(new int[]{cord[0]+1,cord[1]});
                     }
                 }
             }
@@ -108,13 +111,14 @@ public class Day16 {
             {
                 if(!map[cord[0]-1][cord[1]].equals("#"))
                 {
-                    if(nodes.contains(cord[0]-1+","+(cord[1]))){
-                        queue.add(new int[]{cord[0]-1,cord[1]});
-                    }
                     String temp = cord[0]-1+","+(cord[1]);
                     if(!dict.containsKey(temp) || Integer.parseInt(dict.get(temp).substring(0,dict.get(temp).indexOf(" ")) )> score+1){
                         //System.out.println(direction);
                         dict.put(cord[0]-1+","+cord[1], score+1 + " " + cord[0]+","+cord[1] + " " + direction);
+                        queue.add(new int[]{cord[0]-1,cord[1]});
+                    }
+                    else if(nodes.contains(cord[0]-1+","+(cord[1]))){
+                        queue.add(new int[]{cord[0]-1,cord[1]});
                     }
                 }
             }
@@ -122,24 +126,26 @@ public class Day16 {
             {
                 if(cord[0] > 0 && !map[cord[0]-1][cord[1]].equals("#"))
                 {
-                    if(nodes.contains(cord[0]-1+","+(cord[1]))){
-                        queue.add(new int[]{cord[0]-1,cord[1]});
-                    }
                     String temp = cord[0]-1+","+(cord[1]);
                     if(!dict.containsKey(temp) || Integer.parseInt(dict.get(temp).substring(0,dict.get(temp).indexOf(" ")) )> score+1001){
                         dict.put(cord[0]-1+","+cord[1], score+1001 + " " + cord[0]+","+cord[1] + " u");
                         //System.out.println(direction);
+                        queue.add(new int[]{cord[0]-1,cord[1]});
+                    }
+                    else if(nodes.contains(cord[0]-1+","+(cord[1]))){
+                        queue.add(new int[]{cord[0]-1,cord[1]});
                     }
                 }
                 if(cord[0] < map.length-1 && !map[cord[0]+1][cord[1]].equals("#"))
                 {
-                    if(nodes.contains(cord[0]+1+","+(cord[1]))){
-                        queue.add(new int[]{cord[0]+1,cord[1]});
-                    }
                     String temp = cord[0]+1+","+(cord[1]);
                     if(!dict.containsKey(temp) || Integer.parseInt(dict.get(temp).substring(0,dict.get(temp).indexOf(" ")) )> score+1001){
                         dict.put(cord[0]+1+","+cord[1], score+1001 + " " + cord[0]+","+cord[1] + " d");
                         //System.out.println(direction);
+                        queue.add(new int[]{cord[0]+1,cord[1]});
+                    }
+                    else if(nodes.contains(cord[0]+1+","+(cord[1]))){
+                        queue.add(new int[]{cord[0]+1,cord[1]});
                     }
                 }
             }
@@ -147,24 +153,26 @@ public class Day16 {
             {
                 if(cord[1] > 0 && !map[cord[0]][cord[1]-1].equals("#"))
                 {
-                    if(nodes.contains(cord[0]+","+(cord[1]-1))){
-                        queue.add(new int[]{cord[0],cord[1]-1});
-                    }
                     String temp = cord[0]+","+(cord[1]-1);
                     if(!dict.containsKey(temp) || Integer.parseInt(dict.get(temp).substring(0,dict.get(temp).indexOf(" ")) )> score+1001){
                         dict.put(cord[0]+","+(cord[1]-1), score+1001 + " " + cord[0]+","+cord[1] + " l");
-                        System.out.println(direction);
+                        queue.add(new int[]{cord[0],cord[1]-1});
+                        //System.out.println(direction);
+                    }
+                    else if(nodes.contains(cord[0]+","+(cord[1]-1))){
+                        queue.add(new int[]{cord[0],cord[1]-1});
                     }
                 }
                 if(cord[1] < map[0].length-1 && !map[cord[0]][cord[1]+1].equals("#"))
                 {
-                    if(nodes.contains(cord[0]+","+(cord[1]+1))){
-                        queue.add(new int[]{cord[0],cord[1]+1});
-                    }
                     String temp = cord[0]+","+(cord[1]+1);
                     if(!dict.containsKey(temp) || Integer.parseInt(dict.get(temp).substring(0,dict.get(temp).indexOf(" ")) )> score+1001){
                         dict.put(cord[0]+","+(cord[1]+1), score+1001 + " " + cord[0]+","+cord[1] + " r");
-                        System.out.println(direction);
+                        queue.add(new int[]{cord[0],cord[1]+1});
+                        //System.out.println(direction);
+                    }
+                    else if(nodes.contains(cord[0]+","+(cord[1]+1))){
+                        queue.add(new int[]{cord[0],cord[1]+1});
                     }
                 }
             }
