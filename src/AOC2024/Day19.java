@@ -9,7 +9,6 @@ public class Day19 {
     {
         System.out.println(findPossible("inputs/input.txt",1));
         System.out.println(findPossible("inputs/input.txt",2));
-        //System.out.println(findPossible("inputs/trial",12));
     }
 
     public static long findPossible(String fileName, int part)
