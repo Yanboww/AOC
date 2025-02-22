@@ -3,9 +3,8 @@ import java.io.*;
 import java.util.*;
 public class Day8 {
     public static void main(String[] args){
-        //System.out.println(findAccumulator("inputs/input.txt",1));
+        System.out.println(findAccumulator("inputs/input.txt",1));
         System.out.println(findAccumulator("inputs/input.txt",2));
-        //System.out.println(findAccumulator("inputs/trial",2));
     }
 
     public static int findAccumulator(String fileName, int part)
