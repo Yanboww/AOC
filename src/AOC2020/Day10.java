@@ -49,13 +49,4 @@ public class Day10 {
         }
         return key.get(inputs.get(inputs.size()-1));
     }
-
-    public static boolean calculateAllowed(ArrayList<Integer> inputs){
-        for(int i = 0; i < inputs.size()-1; i++){
-            int current = inputs.get(i);
-            int next = inputs.get(i+1);
-            if(next - current > 3) return false;
-        }
-        return true;
-    }
 }
