@@ -3,12 +3,11 @@ import java.io.*;
 import java.util.*;
 public class Day15 {
     public static void main(String[] args){
-        //System.out.println(recite("inputs/input.txt",1));
-        System.out.println(recite("inputs/input.txt",2));
-        //System.out.println(recite("inputs/trial",2));
+        System.out.println(recite("inputs/input.txt",2020));
+        System.out.println(recite("inputs/input.txt",30000000));
     }
 
-    public static long recite(String fileName,int part){
+    public static long recite(String fileName,int stop){
         File f = new File(fileName);
         HashMap<String,Integer> history = new HashMap<>();
         int count = 1;
@@ -26,28 +25,11 @@ public class Day15 {
         catch (FileNotFoundException e){
             System.out.println("File not found");
         }
-        if(part == 1) return the2020th(history,current,count);
-        return the30Millionth(history,current,count);
+        return reciteTo(history,current,count,stop);
     }
 
-    public static int the2020th(HashMap<String,Integer> history, String prev, int count){
-        while(count < 2020){
-            if(history.containsKey(prev) &&  history.get(prev) != count){
-                int lastIndex = history.get(prev);
-                history.put(prev,count);
-                prev = Integer.toString(count-lastIndex);
-            }
-            else{
-                history.put(prev,count);
-                prev = "0";
-            }
-            count++;
-        }
-        return Integer.parseInt(prev);
-    }
-
-    public static int the30Millionth(HashMap<String,Integer> history, String prev, int count){
-        while(count < 30000000){
+    public static int reciteTo (HashMap<String,Integer> history, String prev, int count, int stop){
+        while(count < stop){
             if(history.containsKey(prev) &&  history.get(prev) != count){
                 int lastIndex = history.get(prev);
                 history.put(prev,count);
