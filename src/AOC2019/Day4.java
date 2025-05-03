@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.regex.*;
 public class Day4 {
     public static void main(String[] args){
+        System.out.println(password("inputs/input.txt",1));
         System.out.println(password("inputs/input.txt",2));
     }
 
@@ -47,7 +48,7 @@ public class Day4 {
     public static boolean checkDouble(int val, int part){
         String valStr = Integer.toString(val);
         if(part == 1) return valStr.matches("\\d*(\\d)\\1\\d*");
-        Pattern p = Pattern.compile("(\\d)\\1{1,}");
+        Pattern p = Pattern.compile("(\\d)\\1+");
         Matcher m = p.matcher(valStr);
         while(m.find()){
             if(m.group().length() == 2) return true;
