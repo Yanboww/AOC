@@ -144,8 +144,8 @@ public class Day14 {
                 minLetter = letter;
             }
         }
-        /*System.out.println("max: " + maxLetter + " " + max);
-        System.out.println("min: " + minLetter + " " + min);**/
+        System.out.println("max: " + maxLetter + " " + max);
+        System.out.println("min: " + minLetter + " " + min);
         return max - min;
     }
 }
