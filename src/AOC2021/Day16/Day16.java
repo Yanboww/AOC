@@ -55,7 +55,6 @@ public class Day16 {
         }
         return count;
     }
-
     public static long packetVal(String code){
         binaryCode = convertToBinary(code);
         Stuff file = structure(null);
@@ -64,7 +63,6 @@ public class Day16 {
 
     public static Stuff structure(Stuff previous){
         Stuff current = null;
-        int count = 0;
         while(!binaryCode.isEmpty()){
             String binaryCode1 = binaryCode;
             int id;
