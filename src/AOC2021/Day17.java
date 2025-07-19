@@ -3,6 +3,7 @@ import java.io.*;
 import java.util.*;
 public class Day17 {
     public static void main(String[] args){
+        //day17
         System.out.println(findVelocity("inputs/input.txt",1));
         System.out.println(findVelocity("inputs/input.txt",2));
     }
