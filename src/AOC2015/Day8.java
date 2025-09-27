@@ -4,9 +4,8 @@ import java.io.FileNotFoundException;
 import java.util.*;
 public class Day8 {
     public static void main(String[] args){
-        //System.out.println(memory("inputs/input.txt",1));
+        System.out.println(memory("inputs/input.txt",1));
         System.out.println(memory("inputs/input.txt",2));
-        //System.out.println(memory("inputs/trial",2));
     }
 
     public static int memory(String fileName, int part) {
@@ -26,7 +25,7 @@ public class Day8 {
         int literals = 0;
         for(String line : input){
             characters += line.length();
-            String stringActual = line.replaceAll("\\\\[\\\\\\\"]","!");
+            String stringActual = line.replaceAll("\\\\[\\\\\"]","!");
             literals += stringActual.replaceAll("\\\\x[a-f0-9]{2}",".").length()-2;
         }
         return characters - literals;
@@ -37,7 +36,7 @@ public class Day8 {
         int encoded  = 0;
         for(String line : input){
             character+=line.length();
-            encoded += line.replaceAll("[\\\\\\\"]","!!").length()+2;
+            encoded += line.replaceAll("[\\\\\"]","!!").length()+2;
         }
         return encoded - character;
     }
