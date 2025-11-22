@@ -58,7 +58,7 @@ public class Day19 {
                 String[] options = dict.get(key).split(" ");
                 for(String option : options){
                     if(input.contains(option)){
-                        input = input.substring(0,input.lastIndexOf(option))+key+input.substring(input.lastIndexOf(option)+option.length());
+                        input = input.substring(0,input.indexOf(option))+key+input.substring(input.indexOf(option)+option.length());
                         steps++;
                     }
                 }
