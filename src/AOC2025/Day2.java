@@ -5,7 +5,6 @@ public class Day2 {
     public static void main(String[] args){
         System.out.println(invalidID("inputs/input.txt",1));
         System.out.println(invalidID("inputs/input.txt",2));
-        //System.out.println(invalidID("inputs/trial", 1));
     }
 
     public static long invalidID(String fileName, int part){
