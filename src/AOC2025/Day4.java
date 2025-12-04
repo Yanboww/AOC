@@ -23,6 +23,7 @@ public class Day4 {
         }
         return validRolls(input,part);
     }
+
     public static int validRolls(String[][] input, int part){
         String[][] copiedArr = copyArr(input);
         int count = 0;
