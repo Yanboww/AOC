@@ -16,12 +16,8 @@ public class Day5 {
             while(s.hasNextLine()){
                 String line = s.nextLine();
                 if(line.isEmpty()) finishedRanges = true;
-                else if(!finishedRanges){
-                    ranges.add(line);
-                }
-                else{
-                    ingredientID.add(Long.parseLong(line));
-                }
+                else if(!finishedRanges) ranges.add(line);
+                else ingredientID.add(Long.parseLong(line));
             }
         } catch (FileNotFoundException e){
             System.out.println("File not found");
