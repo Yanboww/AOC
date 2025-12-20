@@ -4,8 +4,6 @@ import java.util.*;
 public class Day12 {
     public static void main(String[] args){
         System.out.println(presents("inputs/input.txt",1));
-        //System.out.println(presents("inputs/input.txt",2));
-        //System.out.println(presents("inputs/trial",1));
     }
 
     public static int presents(String fileName, int part){
