@@ -34,7 +34,7 @@ public class Day22 {
     }
 
     public static void playerTurn(int bossHp, int bossDamage, int playerHp, int playerMana, int cost, int dT, int daT, int mT, int part){
-        if(!manaCosts.isEmpty() && manaCosts.peek() < cost) return;
+        if(!manaCosts.isEmpty() && manaCosts.peek() <= cost) return;
         if(part == 2) playerHp--;
         if(playerHp <= 0) return;
         if(dT > 0){
